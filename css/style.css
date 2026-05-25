@@ -14,24 +14,26 @@
   --color-ink-light: #2C2825;
   --color-stone: #6B6560;
   --color-stone-light: #9A9490;
-  --color-terracotta: #B35E3A;
-  --color-terracotta-dark: #93482A;
-  --color-terracotta-light: #C87A5A;
+  --color-terracotta: #C2484E;
+  --color-terracotta-dark: #A63A40;
+  --color-terracotta-light: #D46B70;
   --color-olive: #6B7053;
   --color-olive-light: #8A8F72;
   --color-gold: #C9A84C;
   --color-gold-light: #D4B55A;
   --color-gold-pale: #FDF6E5;
-  --color-basque-red: #B5343A;
+  --color-basque-red: #C2484E;
   --color-basque-green: #2D4A3E;
-  --color-wine: #722F37;
+  --color-wine: #8B2D34;
+  --color-navy: #264282;
+  --color-navy-dark: #1B3060;
   --color-success: #2D6A4F;
   --color-error: #C13838;
   --color-whatsapp: #25D366;
   --color-whatsapp-dark: #1EA84E;
 
   /* === Gradients === */
-  --gradient-warm: linear-gradient(135deg, #B35E3A 0%, #93482A 100%);
+  --gradient-warm: linear-gradient(135deg, #C2484E 0%, #A63A40 100%);
   --gradient-gold: linear-gradient(135deg, #C9A84C 0%, #D4B55A 100%);
   --gradient-dark: linear-gradient(165deg, #1A1614 0%, #2D2020 50%, #1A1010 100%);
   --gradient-cream: linear-gradient(180deg, #FBF7F0 0%, #FFFFFF 100%);
@@ -86,7 +88,7 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.14);
-  --shadow-glow-terracotta: 0 4px 20px rgba(179, 94, 58, 0.3);
+  --shadow-glow-terracotta: 0 4px 20px rgba(194, 72, 78, 0.3);
   --shadow-glow-gold: 0 4px 20px rgba(201, 168, 76, 0.3);
 
   /* === Borders === */
@@ -304,7 +306,7 @@ h4 { font-size: var(--text-2xl); }
 
 .btn--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(179, 94, 58, 0.4), 0 4px 12px rgba(179, 94, 58, 0.15);
+  box-shadow: 0 12px 36px rgba(194, 72, 78, 0.4), 0 4px 12px rgba(194, 72, 78, 0.15);
   color: var(--color-white);
 }
 
@@ -439,7 +441,22 @@ h4 { font-size: var(--text-2xl); }
   padding: 0 var(--space-xl);
 }
 
-.header-logo img { height: 52px; width: auto; }
+.header-logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 
 .nav-main {
   display: flex;
@@ -680,6 +697,38 @@ h4 { font-size: var(--text-2xl); }
   animation-delay: 0.6s;
 }
 
+/* Hero-specific button refinements */
+.hero__actions .btn--primary {
+  font-size: 0.9375rem;
+  letter-spacing: 0.03em;
+  padding: 1rem 2.4rem;
+  box-shadow: 0 4px 24px rgba(194, 72, 78, 0.4), 0 1px 4px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+.hero__actions .btn--primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(194, 72, 78, 0.5), 0 6px 16px rgba(194, 72, 78, 0.2);
+}
+
+.hero__actions .btn--outline-light {
+  font-size: 0.9375rem;
+  letter-spacing: 0.03em;
+  padding: 1rem 2.4rem;
+  font-weight: 500;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero__actions .btn--outline-light:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
 /* Trust bar inside hero */
 .hero__trust {
   display: inline-flex;
@@ -704,6 +753,20 @@ h4 { font-size: var(--text-2xl); }
 }
 
 .hero__trust-item img { height: 26px; width: auto; opacity: 0.8; }
+
+.hero__trust-item--link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin: -4px -10px;
+}
+
+.hero__trust-item--link:hover {
+  color: var(--color-gold);
+  background: rgba(255, 255, 255, 0.08);
+}
 
 .hero__trust-rating {
   display: flex;
@@ -1139,6 +1202,19 @@ h4 { font-size: var(--text-2xl); }
 
 .press-bar-item:hover img { opacity: 0.9; }
 
+.press-bar-item--link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.press-bar-item--link:hover {
+  color: var(--color-terracotta);
+}
+
+.press-bar-item--link:hover img { opacity: 1; }
+
 /* =================================================================
    EVENTS
    ================================================================= */
@@ -1439,7 +1515,7 @@ h4 { font-size: var(--text-2xl); }
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: var(--color-terracotta);
-  box-shadow: 0 0 0 4px rgba(179, 94, 58, 0.12);
+  box-shadow: 0 0 0 4px rgba(194, 72, 78, 0.12);
 }
 
 .form-group textarea { min-height: 100px; resize: vertical; }

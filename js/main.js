@@ -99,7 +99,7 @@ function initHeroSlideshow() {
 
   let current = 0;
   let interval;
-  var DURATION = 5500;
+  var DURATION = 4500;
 
   slides.forEach(function(_, i) {
     var dot = document.createElement('button');
