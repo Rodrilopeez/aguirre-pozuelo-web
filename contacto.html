@@ -88,7 +88,15 @@
 
             <!-- Mapa -->
             <div class="contact-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97172.05504199324!2d-3.8124!3d40.4337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI2JzAxLjMiTiAzwrA0OCc0NC42Ilc!5e0!3m2!1ses!2ses!4v1!5m0!1m1!2sCalle%20Segundo%20Mata%2C%201%2C%2028224%20Pozuelo%20de%20Alarc%C3%B3n%2C%20Madrid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Aguirre Pozuelo"></iframe>
+              <iframe src="https://www.google.com/maps/embed?q=Calle+Segundo+Mata+1+Pozuelo+de+Alarcon+Madrid&z=16&output=embed&t=m"
+                      width="100%"
+                      height="400"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Ubicación de Aguirre Pozuelo en Calle Segundo Mata, 1, Pozuelo de Alarcón">
+              </iframe>
             </div>
 
             <p style="font-size:0.8rem;color:var(--color-stone-light);margin-top:var(--space-md);">
@@ -100,28 +108,30 @@
           <div id="booking">
             <div class="booking-form">
               <h3>Reserva tu mesa</h3>
-              <p style="font-size:0.875rem;color:var(--color-stone);margin-bottom:var(--space-lg);">Completa el formulario y te confirmaremos la reserva lo antes posible. Para reservas de más de 6 personas o eventos, escríbenos a <a href="mailto:teresa@aguirreplace.es">teresa@aguirreplace.es</a>.</p>
+              <p style="font-size:0.875rem;color:var(--color-stone);margin-bottom:var(--space-lg);">Completa el formulario y te confirmaremos la reserva lo antes posible. Para más de 6 personas o eventos, <a href="mailto:teresa@aguirreplace.es">escríbenos aquí</a>.</p>
 
-              <form data-ajax>
+              <form id="bookingForm" data-ajax action="https://formsubmit.co/contacto@aguirreplace.es" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
                 <div class="form-group">
-                  <label for="name">Nombre completo *</label>
-                  <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                  <label for="name">Nombre completo <span class="form-required">*</span></label>
+                  <input type="text" id="name" name="name" required placeholder="Tu nombre completo" autocomplete="name">
                 </div>
                 <div class="form-group">
-                  <label for="email">Correo electrónico *</label>
-                  <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                  <label for="email">Correo electrónico <span class="form-required">*</span></label>
+                  <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
                 </div>
                 <div class="form-group">
-                  <label for="phone">Teléfono *</label>
-                  <input type="tel" id="phone" name="phone" required placeholder="6XX XXX XXX">
+                  <label for="phone">Teléfono <span class="form-required">*</span></label>
+                  <input type="tel" id="phone" name="phone" required placeholder="6XX XXX XXX" autocomplete="tel">
                 </div>
                 <div class="form-group">
-                  <label for="date">Fecha deseada</label>
-                  <input type="date" id="date" name="date">
+                  <label for="date">Fecha deseada <span class="form-required">*</span></label>
+                  <input type="date" id="date" name="date" required>
                 </div>
                 <div class="form-group">
-                  <label for="time">Hora</label>
-                  <select id="time" name="time">
+                  <label for="time">Hora <span class="form-required">*</span></label>
+                  <select id="time" name="time" required>
                     <option value="">Selecciona una hora</option>
                     <option value="08:15">08:15</option><option value="09:00">09:00</option><option value="09:30">09:30</option>
                     <option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option>
@@ -132,7 +142,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="guests">Número de comensales</label>
+                  <label for="guests">Comensales</label>
                   <select id="guests" name="guests">
                     <option value="1">1 persona</option><option value="2" selected>2 personas</option>
                     <option value="3">3 personas</option><option value="4">4 personas</option>
@@ -146,9 +156,18 @@
                 </div>
                 <div class="form-checkbox">
                   <input type="checkbox" id="privacy" name="privacy" required>
-                  <label for="privacy">He leído y acepto la <a href="politica-privacidad.html">política de privacidad</a> *</label>
+                  <label for="privacy">He leído y acepto la <a href="politica-privacidad.html" target="_blank">política de privacidad</a> <span class="form-required">*</span></label>
                 </div>
-                <button type="submit" class="btn btn--primary" style="width:100%;">Solicitar reserva</button>
+                <button type="submit" class="btn btn--primary btn--full">Solicitar reserva</button>
+
+                <div class="form-feedback form-feedback--success" id="formSuccess" hidden>
+                  <strong>¡Reserva enviada!</strong>
+                  <p>Te confirmaremos en menos de 24h. Si es urgente, <a href="https://wa.me/34911527529">contáctanos por WhatsApp</a>.</p>
+                </div>
+                <div class="form-feedback form-feedback--error" id="formError" hidden>
+                  <strong>Error al enviar</strong>
+                  <p id="formErrorMsg">Inténtalo de nuevo o escríbenos directamente a <a href="mailto:contacto@aguirreplace.es">contacto@aguirreplace.es</a>.</p>
+                </div>
               </form>
             </div>
           </div>

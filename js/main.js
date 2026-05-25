@@ -1,17 +1,18 @@
 /* ================================================================
    AGUIRRE POZUELO — Taberna Contemporánea
-   JavaScript Principal
+   JavaScript Principal — UI/UX Pro Max
    ================================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollEffects();
+  initHeroParallax();
   initWhatsApp();
   initCookieBanner();
   initSmoothScroll();
   initBackToTop();
   initForms();
-  initAnimations();
+  initScrollReveals();
 });
 
 /* --- Mobile Navigation --- */
@@ -58,17 +59,30 @@ function initScrollEffects() {
         }
 
         if (backToTop) {
-          if (scrollY > 800) {
-            backToTop.classList.add('visible');
-          } else {
-            backToTop.classList.remove('visible');
-          }
+          backToTop.classList.toggle('visible', scrollY > 800);
         }
 
         ticking = false;
       });
       ticking = true;
     }
+  });
+}
+
+/* --- Hero Mouse Parallax --- */
+function initHeroParallax() {
+  const hero = document.getElementById('hero');
+  const content = document.querySelector('.hero__content');
+  if (!hero || !content) return;
+
+  hero.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 14;
+    const y = (e.clientY / window.innerHeight - 0.5) * 14;
+    content.style.transform = `translate(${x}px, ${y}px)`;
+  }, { passive: true });
+
+  hero.addEventListener('mouseleave', () => {
+    content.style.transform = 'translate(0, 0)';
   });
 }
 
@@ -79,18 +93,11 @@ function initWhatsApp() {
 
   if (!btn) return;
 
-  // Show tooltip after 3 seconds
   if (tooltip) {
-    setTimeout(() => {
-      tooltip.classList.add('visible');
-    }, 3000);
+    setTimeout(() => tooltip.classList.add('visible'), 3000);
 
-    // Hide tooltip when clicking WhatsApp button
-    btn.addEventListener('click', () => {
-      tooltip.classList.remove('visible');
-    });
+    btn.addEventListener('click', () => tooltip.classList.remove('visible'));
 
-    // Hide tooltip when scrolling
     window.addEventListener('scroll', () => {
       tooltip.classList.remove('visible');
     }, { once: true });
@@ -112,17 +119,13 @@ function initCookieBanner() {
 
   if (!banner) return;
 
-  // Check if user already made a choice
   const cookieChoice = localStorage.getItem('aguirre-cookie-consent');
   if (cookieChoice) {
     banner.remove();
     return;
   }
 
-  // Show banner after a short delay
-  setTimeout(() => {
-    banner.classList.add('active');
-  }, 800);
+  setTimeout(() => banner.classList.add('active'), 800);
 
   function setConsent(choice) {
     localStorage.setItem('aguirre-cookie-consent', choice);
@@ -168,24 +171,35 @@ function initBackToTop() {
   });
 }
 
-/* --- Form Validation & Submission --- */
+/* --- Form with real submission --- */
 function initForms() {
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+
   const forms = document.querySelectorAll('form[data-ajax]');
+  if (!forms.length) return;
 
   forms.forEach(form => {
+    const isBookingForm = form.id === 'bookingForm';
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Basic validation
-      const required = form.querySelectorAll('[required]');
+      // Clear previous state
+      form.querySelectorAll('.form-input--error').forEach(el => el.classList.remove('form-input--error'));
+
+      // Validate
       let valid = true;
+      const required = form.querySelectorAll('[required]');
 
       required.forEach(field => {
-        if (!field.value.trim()) {
+        const value = field.type === 'checkbox' ? field.checked : field.value.trim();
+        if (!value) {
           valid = false;
-          field.classList.add('error');
-        } else {
-          field.classList.remove('error');
+          field.classList.add('form-input--error');
         }
       });
 
@@ -195,71 +209,90 @@ function initForms() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailField.value.trim())) {
           valid = false;
-          emailField.classList.add('error');
+          emailField.classList.add('form-input--error');
         }
       }
 
-      // Checkbox validation
-      const checkbox = form.querySelector('input[type="checkbox"][required]');
-      if (checkbox && !checkbox.checked) {
-        valid = false;
-        checkbox.classList.add('error');
-      }
-
       if (!valid) {
-        showFormMessage(form, 'error', 'Por favor, completa todos los campos obligatorios correctamente.');
+        showFeedback(form, 'error', 'Completa todos los campos obligatorios.');
         return;
       }
 
-      // Simulate submission (replace with real endpoint)
+      // Submit
       const submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+      const originalHTML = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.innerHTML = '<span class="form-spinner"></span> Enviando...';
+        submitBtn.disabled = true;
+      }
 
       try {
-        // For demo: simulate network request
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        showFormMessage(form, 'success', 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.');
-        form.reset();
+        const actionURL = form.getAttribute('action');
+        let res;
+
+        if (actionURL && !actionURL.includes('formsubmit.co')) {
+          res = await fetch(actionURL, {
+            method: form.getAttribute('method') || 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+        } else {
+          res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+        }
+
+        if (res.ok) {
+          form.reset();
+          showFeedback(form, 'success', '¡Mensaje enviado! Te responderemos pronto.');
+        } else {
+          throw new Error('Server error');
+        }
       } catch (err) {
-        showFormMessage(form, 'error', 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
+        // Fallback: show success anyway for demo
+        showFeedback(form, 'error', 'No se pudo enviar. Escríbenos a contacto@aguirreplace.es o llámanos al 911 527 529.');
+      }
+
+      if (submitBtn) {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
       }
     });
   });
 }
 
-function showFormMessage(form, type, message) {
-  // Remove existing messages
+function showFeedback(form, type, message) {
+  // Try named feedback elements first
+  const successEl = document.getElementById('formSuccess');
+  const errorEl = document.getElementById('formError');
+  const errorMsg = document.getElementById('formErrorMsg');
+
+  if (type === 'success' && successEl && errorEl) {
+    successEl.hidden = false;
+    errorEl.hidden = true;
+    setTimeout(() => { successEl.hidden = true; }, 5000);
+    return;
+  }
+
+  if (type === 'error' && errorEl && successEl) {
+    errorEl.hidden = false;
+    if (errorMsg) errorMsg.textContent = message;
+    successEl.hidden = true;
+    return;
+  }
+
+  // Fallback: create inline message
   const existing = form.querySelector('.form-message');
   if (existing) existing.remove();
 
   const msgEl = document.createElement('div');
-  msgEl.className = `form-message form-message--${type}`;
+  msgEl.className = `form-feedback form-feedback--${type}`;
   msgEl.textContent = message;
-  msgEl.style.cssText = `
-    padding: 12px 16px;
-    border-radius: 8px;
-    margin-top: 16px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-align: center;
-    animation: fadeInUp 0.4s ease-out;
-  `;
-
-  if (type === 'success') {
-    msgEl.style.backgroundColor = '#EDF7F0';
-    msgEl.style.color = '#2D6A4F';
-    msgEl.style.border = '1px solid #BFE8D0';
-  } else {
-    msgEl.style.backgroundColor = '#FEF2F2';
-    msgEl.style.color = '#991B1B';
-    msgEl.style.border = '1px solid #FECACA';
-  }
-
+  msgEl.style.marginTop = '1rem';
   form.appendChild(msgEl);
 
-  // Auto-remove success messages
   if (type === 'success') {
     setTimeout(() => {
       msgEl.style.opacity = '0';
@@ -269,29 +302,54 @@ function showFormMessage(form, type, message) {
   }
 }
 
-/* --- Scroll-triggered Animations --- */
-function initAnimations() {
-  const elements = document.querySelectorAll('.fade-in-up, .reveal');
+/* --- Scroll-triggered Reveal Animations --- */
+function initScrollReveals() {
+  // Add directional reveals and stagger delays to cards in grids
+  const gridCards = document.querySelectorAll(
+    '.star-dish-card, .blog-card, .testimonial-card, .product-card, .event-type'
+  );
 
-  if (!elements.length) return;
+  gridCards.forEach((card, i) => {
+    if (!card.classList.contains('reveal')) {
+      card.classList.add('reveal', 'reveal--up');
+      // Auto-stagger within the same parent grid
+      const parent = card.parentElement;
+      if (parent) {
+        const siblings = Array.from(parent.children).filter(c =>
+          c.matches('.star-dish-card, .blog-card, .testimonial-card, .product-card, .event-type')
+        );
+        const idx = siblings.indexOf(card);
+        if (idx >= 0 && idx < 8) {
+          card.classList.add('reveal--d' + (idx + 1));
+        }
+      }
+    }
+  });
+
+  // Add reveal to section images and content blocks
+  document.querySelectorAll('.story-image, .story-text, .events-highlight-image, .section-header, .newsletter-box, .cta-banner').forEach(el => {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal', 'reveal--up');
+    }
+  });
+
+  // IntersectionObserver
+  const allReveals = document.querySelectorAll('.reveal');
+  if (!allReveals.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        entry.target.classList.add('revealed');
+        entry.target.classList.add('reveal--visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15,
+    threshold: 0.1,
     rootMargin: '0px 0px -40px 0px'
   });
 
-  elements.forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-  });
+  allReveals.forEach(el => observer.observe(el));
 }
 
 /* --- Current Year for Copyright --- */
@@ -306,6 +364,7 @@ document.querySelectorAll('[data-year]').forEach(el => {
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
+    if (!href) return;
     if (href === currentPath || (href !== '/' && currentPath.includes(href.replace('./', '')))) {
       link.classList.add('active');
     }
