@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollEffects();
   initHeroParallax();
+  initHeroSlideshow();
   initWhatsApp();
   initCookieBanner();
   initSmoothScroll();
@@ -84,6 +85,78 @@ function initHeroParallax() {
   hero.addEventListener('mouseleave', () => {
     content.style.transform = 'translate(0, 0)';
   });
+}
+
+/* --- Hero Slideshow --- */
+function initHeroSlideshow() {
+  const hero = document.getElementById('hero');
+  const slides = document.querySelectorAll('.hero__slide');
+  const dotsContainer = document.getElementById('heroDots');
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
+
+  if (!hero || !dotsContainer || slides.length < 2) return;
+
+  let current = 0;
+  let interval;
+  var DURATION = 5500;
+
+  slides.forEach(function(_, i) {
+    var dot = document.createElement('button');
+    dot.className = 'hero__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Diapositiva ' + (i + 1));
+    dot.addEventListener('click', function() { goTo(i); });
+    dotsContainer.appendChild(dot);
+  });
+
+  var dots = dotsContainer.querySelectorAll('.hero__dot');
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    resetTimer();
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function prev() {
+    goTo((current - 1 + slides.length) % slides.length);
+  }
+
+  function resetTimer() {
+    clearInterval(interval);
+    interval = setInterval(next, DURATION);
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  var touchStartX = 0;
+  hero.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  hero.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev();
+    }
+  });
+
+  hero.addEventListener('mouseenter', function() { clearInterval(interval); });
+  hero.addEventListener('mouseleave', function() {
+    interval = setInterval(next, DURATION);
+  });
+
+  var mqReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!mqReducedMotion.matches) {
+    interval = setInterval(next, DURATION);
+  }
 }
 
 /* --- WhatsApp Floating Button --- */

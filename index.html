@@ -6,7 +6,7 @@
   <meta name="description" content="Aguirre Pozuelo — Taberna contemporánea y casa de comidas en Pozuelo de Alarcón. Solete Repsol, Guía Michelin. Cocina vasco-navarra 100% casera, tienda gourmet, eventos y catering para empresas.">
   <meta name="keywords" content="restaurante Pozuelo, taberna contemporánea Pozuelo, cocina vasca Madrid, catering empresas Pozuelo, celebraciones Pozuelo, tienda gourmet Pozuelo, Aguirre Pozuelo">
   <meta name="author" content="Aguirre Place SLU">
-  <meta name="theme-color" content="#C26A4A">
+  <meta name="theme-color" content="#B35E3A">
 
   <meta property="og:title" content="Aguirre Pozuelo — Taberna Contemporánea | Solete Repsol">
   <meta property="og:description" content="Buen comer, buen beber, buen vivir. Cocina 100% casera de raíces vasco-navarras en el corazón de Pozuelo de Alarcón. Reconocidos por Guía Repsol y Guía Michelin.">
@@ -59,13 +59,13 @@
   <!-- ===== HEADER ===== -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="/" class="header-logo" aria-label="Aguirre Pozuelo — Inicio">
+      <a href="index.html" class="header-logo" aria-label="Aguirre Pozuelo — Inicio">
         <span style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--color-ink);">AGUIRRE</span>
         <span style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--color-stone-light);display:block;">Pozuelo</span>
       </a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav-main" role="navigation" aria-label="Navegación principal">
-        <a href="/">Aguirre</a><a href="nos-inspira.html">Nos inspira</a><a href="eventos.html">Eventos</a><a href="productos.html">Productos</a><a href="carta-comida.html">Carta</a><a href="blog.html">Más Aguirre</a><a href="contacto.html">Contacto</a><a href="contacto.html#booking" class="btn btn--primary">Reservar</a>
+        <a href="index.html">Aguirre</a><a href="nos-inspira.html">Nos inspira</a><a href="eventos.html">Eventos</a><a href="productos.html">Productos</a><a href="carta-comida.html">Carta</a><a href="blog.html">Más Aguirre</a><a href="contacto.html">Contacto</a><a href="contacto.html#booking" class="btn btn--primary">Reservar</a>
       </nav>
     </div>
   </header>
@@ -73,14 +73,21 @@
   <!-- ===== MAIN ===== -->
   <main id="main-content">
 
-    <!-- HERO — Full Viewport Espectacular -->
+    <!-- HERO — Full Viewport Espectacular con Slideshow -->
     <section class="hero" id="hero">
-      <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85&fit=crop');"></div>
+      <div class="hero__slides" id="heroSlides">
+        <div class="hero__slide active" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=85&fit=crop');"></div>
+        <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85&fit=crop');"></div>
+        <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1559329007-40df8a93fcf0?w=1600&q=85&fit=crop');"></div>
+        <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=85&fit=crop');"></div>
+        <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1600&q=85&fit=crop');"></div>
+      </div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <p class="hero__pretitle">Pozuelo de Alarcón · Madrid</p>
         <h1 class="hero__title">Buen comer,<br>buen beber, <em>buen vivir</em></h1>
         <p class="hero__subtitle">Taberna contemporánea y casa de comidas. Cocina 100% casera con raíces vasco-navarras. Solete Repsol y Guía Michelin.</p>
+        <p class="hero__tagline">Tu lugar de encuentro</p>
         <div class="hero__actions">
           <a href="contacto.html#booking" class="btn btn--primary btn--lg">Reservar mesa</a>
           <a href="carta-comida.html" class="btn btn--outline-light btn--lg">Ver la carta</a>
@@ -93,6 +100,9 @@
           <div class="hero__trust-item">Precio medio <strong style="color:var(--color-gold);">25-35€</strong></div>
         </div>
       </div>
+      <div class="hero__dots" id="heroDots"></div>
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Anterior">&#8249;</button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Siguiente">&#8250;</button>
       <div class="hero__scroll">
         <span>Descubre</span>
       </div>
@@ -109,6 +119,29 @@
         <div class="press-bar-item"><span style="font-size:1.5rem;">📰</span><span>Revista Nuevo Estilo</span></div>
       </div>
     </div>
+
+    <!-- AMBIANCE STRIP -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="ambiance-strip">
+          <div class="ambiance-strip__item reveal reveal--up">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=85&fit=crop"
+                 alt="Interior de Aguirre Pozuelo — Salón principal acogedor"
+                 loading="lazy">
+          </div>
+          <div class="ambiance-strip__item reveal reveal--up reveal--d2">
+            <img src="https://images.unsplash.com/photo-1559329007-40df8a93fcf0?w=800&q=85&fit=crop"
+                 alt="Terraza de Aguirre Pozuelo — Espacio exterior"
+                 loading="lazy">
+          </div>
+          <div class="ambiance-strip__item reveal reveal--up reveal--d3">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=85&fit=crop"
+                 alt="Detalle de mesa en Aguirre Pozuelo — Cocina con mimo"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- STAR DISHES -->
     <section class="section">
@@ -183,6 +216,22 @@
             <blockquote>"Beltza deleitó a gourmets de todo el mundo con los sabores de nuestra tierra."</blockquote>
             <a href="nos-inspira.html" class="btn btn--outline">Conoce la historia completa</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONGI ETORRI -->
+    <section class="section section--cream">
+      <div class="container container--narrow" style="text-align:center;">
+        <span class="section-label">Ongi etorri</span>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">Bienvenidos a esta casa</h2>
+        <p style="font-family:var(--font-accent);font-size:1.15rem;color:var(--color-stone);font-style:italic;max-width:600px;margin:0 auto var(--space-xl);line-height:1.7;">
+          Un lugar de encuentro, un lugar donde poder comprar, un lugar para celebrar.<br>
+          Como en casa, pero con Solete Repsol.
+        </p>
+        <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;justify-content:center;">
+          <a href="contacto.html#booking" class="btn btn--primary btn--lg">Reservar mesa</a>
+          <a href="productos.html" class="btn btn--outline btn--lg">Nuestra tienda</a>
         </div>
       </div>
     </section>
@@ -339,6 +388,9 @@
       <div class="footer-bottom">
         <span>© <span data-year>2025</span> Aguirre Place SLU — Todos los derechos reservados</span>
         <div class="footer-bottom-links"><a href="aviso-legal.html">Aviso Legal</a><a href="politica-privacidad.html">Privacidad</a><a href="politica-cookies.html">Cookies</a></div>
+        <div style="text-align:center;color:rgba(255,255,255,0.22);font-size:0.65rem;margin-top:var(--space-sm);">
+          Interiorismo: Alex D'Alessio
+        </div>
       </div>
     </div>
   </footer>
