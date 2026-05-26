@@ -1,49 +1,74 @@
 # Aguirre Pozuelo — Taberna Contemporánea
 
-Nueva web para **Aguirre Pozuelo**, taberna contemporánea y casa de comidas en Pozuelo de Alarcón (Madrid).
+Sitio web de Aguirre Pozuelo, taberna contemporánea y casa de comidas en Pozuelo de Alarcón.
 
-## Mejoras aplicadas
+## Stack
 
-Basado en auditoría técnica, SEO y CRO:
+HTML5 + CSS moderno + JavaScript vanilla. Sin build tools. Sin dependencias pesadas.
 
-- Barra de reconocimientos en hero (Solete Repsol, Guía Michelin, Canal Cocina)
-- Cartas de menú en HTML (ya no en PDF)
-- Sistema de reservas (formulario optimizado)
-- Botón de WhatsApp Business
-- Google Maps integrado
-- Precio medio visible
-- Platos estrella con foto en home
-- Schema markup (Restaurant, Menu, LocalBusiness)
-- Diseño responsive moderno
-- Optimización SEO local
-- Información de alérgenos
-- Newsletter signup
+Dependencias CDN ligeras y opcionales (degradan a CSS si no cargan):
+- **Lenis** 1.1.13 — smooth scroll
+- **GSAP + ScrollTrigger** 3.12.5 — sólo cargados en el `index.html` para animaciones suaves; el resto de páginas usa IntersectionObserver puro.
 
 ## Estructura
 
 ```
 aguirre-pozuelo-web/
-├── index.html              # Home
-├── nos-inspira.html        # Historia Beltza
-├── eventos.html            # Eventos y celebraciones
-├── productos.html          # Tienda gourmet
-├── carta-comida.html       # Carta de comidas (HTML)
-├── carta-bebidas.html      # Carta de bebidas (HTML)
-├── carta-desayunos.html    # Carta de desayunos (HTML)
-├── blog.html               # Blog / Más Aguirre
-├── contacto.html           # Contacto y reservas
-├── css/
-│   └── style.css           # Estilos principales
-├── js/
-│   └── main.js             # Funcionalidad JavaScript
-└── assets/
-    └── images/             # Imágenes del sitio
+├── index.html                  # Home (hero cinematográfico + 8 secciones)
+├── nos-inspira.html            # Historia de Beltza
+├── eventos.html                # Eventos y celebraciones
+├── productos.html              # Tienda gourmet
+├── carta-comida.html           # Carta de comidas
+├── carta-bebidas.html          # Carta de bebidas
+├── carta-desayunos.html        # Carta de desayunos
+├── blog.html                   # Más Aguirre
+├── contacto.html               # Contacto + reservas
+├── aviso-legal.html            # Legal
+├── politica-privacidad.html
+├── politica-cookies.html
+├── css/style.css               # CSS único
+├── js/main.js                  # JS único
+├── sitemap.xml                 # SEO
+├── robots.txt                  # SEO
+└── DESIGN_TOKENS.md            # Sistema de diseño
 ```
 
-## Tecnología
+## Sistema de diseño
 
-HTML5, CSS3, Vanilla JavaScript. Sin dependencias, sin build tools. Listo para desplegar en cualquier hosting.
+Ver `DESIGN_TOKENS.md` para paleta, tipografía, escala, easings, sombras y reglas de uso.
 
-## Créditos
+## Tipografía
 
-Diseño y desarrollo basado en las mejoras propuestas por el equipo de auditoría digital para Aguirre Pozuelo.
+- **Fraunces** — display (con variable axes `opsz` y `SOFT`)
+- **Inter** — UI
+- **Cormorant Garamond** — itálicas evocadoras
+
+## Imágenes
+
+Todas las imágenes se cargan remotamente desde `aguirrepozuelo.com/wp-content/uploads/`. Cero stock, cero IA.
+
+## Desarrollo local
+
+```bash
+npx http-server -p 8000
+# luego abrir http://localhost:8000
+```
+
+## Accesibilidad
+
+- WCAG AA en contraste verificado en pares críticos
+- Navegación 100% por teclado (Tab, Enter, Esc, flechas en sliders)
+- Skip link siempre presente
+- `prefers-reduced-motion: reduce` desactiva slider autoplay, Ken Burns, parallax, cursor custom, page transitions
+- Hit targets ≥ 44×44 px
+
+## SEO
+
+- JSON-LD Restaurant completo en index (hours, menu URLs, geo, sameAs, ratings)
+- Open Graph + Twitter cards por página
+- `canonical` declarado
+- `sitemap.xml` + `robots.txt`
+
+## Despliegue
+
+Sirve cualquier hosting estático (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
