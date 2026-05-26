@@ -516,69 +516,87 @@
       </div>
     </section>
 
-    <!-- ============ TESTIMONIALS ============ -->
-    <section class="tm" aria-label="Lo que dicen nuestros clientes">
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews" aria-label="Valoraciones de clientes">
+      <div class="reviews__bg">
+        <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-2.jpg" alt="" loading="lazy" aria-hidden="true">
+      </div>
       <div class="container">
-        <div class="tm__quote-mark" aria-hidden="true">"</div>
-        <div class="tm__inner">
-          <div class="tm__progress" aria-hidden="true">
-            <div class="tm__progress-bar" id="tmProgressBar"></div>
-          </div>
-
-          <div class="tm__slides" id="tmSlides">
-            <div class="tm__slide is-active" data-tm="0">
-              <p class="tm__text">«Nos ha encantado. Hacía falta un lugar así en la zona. El tomate con bonito y las alcachofas, exquisitas. Y la tienda de productos seleccionados, una maravilla.»</p>
-              <div class="tm__footer-block">
-                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Nicolas-Sztejfman-Rossi.png" alt="Nicolás Sztejfman Rossi" loading="lazy"></div>
-                <span class="tm__author">Nicolás Sztejfman Rossi</span>
-                <span class="tm__stars">★★★★★</span>
-              </div>
+        <div class="reviews__inner">
+          <div class="reviews__score" data-reveal>
+            <span class="reviews__rating-label">Valoración</span>
+            <div class="reviews__rating">4.7</div>
+            <div class="reviews__stars-big">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-
-            <div class="tm__slide" data-tm="1">
-              <p class="tm__text">«Qué maravilla este nuevo lugar en Pozuelo. La comida de caerse muerta. Teresa transmite el amor por la cocina a cada momento. Una oda para los disfrutones.»</p>
-              <div class="tm__footer-block">
-                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Patricia-Silva.png" alt="Patricia Silva" loading="lazy"></div>
-                <span class="tm__author">Patricia Silva</span>
-                <span class="tm__stars">★★★★★</span>
-              </div>
-            </div>
-
-            <div class="tm__slide" data-tm="2">
-              <p class="tm__text">«Celebramos un cumpleaños familiar y todo fue genial. Las croquetas de cecina y la ensaladilla, espectaculares. La terraza es muy grande, tranquila y agradable.»</p>
-              <div class="tm__footer-block">
-                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Marisol-CP.png" alt="Marisol CP" loading="lazy"></div>
-                <span class="tm__author">Marisol CP</span>
-                <span class="tm__stars">★★★★★</span>
-              </div>
-            </div>
-
-            <div class="tm__slide" data-tm="3">
-              <p class="tm__text">«Es un sitio estupendo, me encanta a cualquier hora del día. Calidad, profesionalidad y un ambiente acogedor. Todos los ingredientes para disfrutar.»</p>
-              <div class="tm__footer-block">
-                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Maria-Jose.png" alt="María José González" loading="lazy"></div>
-                <span class="tm__author">María José González</span>
-                <span class="tm__stars">★★★★★</span>
-              </div>
-            </div>
-
-            <div class="tm__slide" data-tm="4">
-              <p class="tm__text">«Las croquetas de jamón y cecina, exquisitas. El bocadillo de pollo crujiente y la tarta de queso con toque de Idiazábal son imperdibles. Precios medios, repetiremos.»</p>
-              <div class="tm__footer-block">
-                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2023/02/Cristina-M-Ponce.png" alt="Cristina Martínez Ponce" loading="lazy"></div>
-                <span class="tm__author">Cristina Martínez Ponce</span>
-                <span class="tm__stars">★★★★★</span>
-              </div>
+            <span class="reviews__count">Basado en 33 reseñas</span>
+            <div class="reviews__badges">
+              <span class="reviews__badge">TripAdvisor</span>
+              <span class="reviews__badge reviews__badge--gold">Solete Repsol</span>
+              <span class="reviews__badge">Guía Michelin</span>
             </div>
           </div>
 
-          <div class="tm__controls">
-            <button class="tm__ctrl" id="tmPrev" aria-label="Reseña anterior">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-            </button>
-            <button class="tm__ctrl" id="tmNext" aria-label="Siguiente reseña">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
+          <div class="reviews__carousel" data-reveal>
+            <div class="reviews__progress" aria-hidden="true">
+              <div class="reviews__progress-bar" id="tmProgressBar"></div>
+            </div>
+
+            <div class="reviews__slides" id="tmSlides">
+              <div class="reviews__slide is-active" data-tm="0">
+                <p class="reviews__text">«Nos ha encantado. Hacía falta un lugar así en la zona. El tomate con bonito y las alcachofas, exquisitas. Y la tienda de productos seleccionados, una maravilla.»</p>
+                <div class="reviews__footer">
+                  <div class="reviews__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Nicolas-Sztejfman-Rossi.png" alt="Nicolás Sztejfman Rossi" loading="lazy"></div>
+                  <span class="reviews__author">Nicolás Sztejfman Rossi</span>
+                  <span class="reviews__stars">★★★★★</span>
+                </div>
+              </div>
+
+              <div class="reviews__slide" data-tm="1">
+                <p class="reviews__text">«Qué maravilla este nuevo lugar en Pozuelo. La comida de caerse muerta. Teresa transmite el amor por la cocina a cada momento. Una oda para los disfrutones.»</p>
+                <div class="reviews__footer">
+                  <div class="reviews__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Patricia-Silva.png" alt="Patricia Silva" loading="lazy"></div>
+                  <span class="reviews__author">Patricia Silva</span>
+                  <span class="reviews__stars">★★★★★</span>
+                </div>
+              </div>
+
+              <div class="reviews__slide" data-tm="2">
+                <p class="reviews__text">«Celebramos un cumpleaños familiar y todo fue genial. Las croquetas de cecina y la ensaladilla, espectaculares. La terraza es muy grande, tranquila y agradable.»</p>
+                <div class="reviews__footer">
+                  <div class="reviews__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Marisol-CP.png" alt="Marisol CP" loading="lazy"></div>
+                  <span class="reviews__author">Marisol CP</span>
+                  <span class="reviews__stars">★★★★★</span>
+                </div>
+              </div>
+
+              <div class="reviews__slide" data-tm="3">
+                <p class="reviews__text">«Es un sitio estupendo, me encanta a cualquier hora del día. Calidad, profesionalidad y un ambiente acogedor. Todos los ingredientes para disfrutar.»</p>
+                <div class="reviews__footer">
+                  <div class="reviews__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Maria-Jose.png" alt="María José González" loading="lazy"></div>
+                  <span class="reviews__author">María José González</span>
+                  <span class="reviews__stars">★★★★★</span>
+                </div>
+              </div>
+
+              <div class="reviews__slide" data-tm="4">
+                <p class="reviews__text">«Las croquetas de jamón y cecina, exquisitas. El bocadillo de pollo crujiente y la tarta de queso con toque de Idiazábal son imperdibles. Precios medios, repetiremos.»</p>
+                <div class="reviews__footer">
+                  <div class="reviews__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2023/02/Cristina-M-Ponce.png" alt="Cristina Martínez Ponce" loading="lazy"></div>
+                  <span class="reviews__author">Cristina Martínez Ponce</span>
+                  <span class="reviews__stars">★★★★★</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews__controls">
+              <button class="reviews__ctrl" id="tmPrev" aria-label="Reseña anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="reviews__ctrl" id="tmNext" aria-label="Siguiente reseña">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>

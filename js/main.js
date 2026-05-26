@@ -385,7 +385,7 @@
   function initTestimonials() {
     const wrap = document.getElementById('tmSlides');
     if (!wrap) return;
-    const slides = Array.from(wrap.querySelectorAll('.tm__slide'));
+    const slides = Array.from(wrap.querySelectorAll('.reviews__slide'));
     const bar = document.getElementById('tmProgressBar');
     const prev = document.getElementById('tmPrev');
     const next = document.getElementById('tmNext');
