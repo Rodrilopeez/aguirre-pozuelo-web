@@ -6,7 +6,6 @@
   'use strict';
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const finePointer = window.matchMedia('(pointer: fine)');
   const isReduced = () => reducedMotion.matches;
 
   document.documentElement.classList.add('js');
@@ -437,48 +436,6 @@
   }
 
   /* ============================================================
-     CUSTOM CURSOR (fine pointer only, respects reduced motion)
-     ============================================================ */
-  function initCursor() {
-    if (!finePointer.matches || isReduced()) return;
-    const cursor = document.getElementById('cursor');
-    if (!cursor) return;
-
-    let mx = window.innerWidth / 2;
-    let my = window.innerHeight / 2;
-    let cx = mx, cy = my;
-    let visible = false;
-
-    window.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      if (!visible) {
-        cursor.classList.add('is-active');
-        visible = true;
-      }
-    });
-    window.addEventListener('mouseleave', () => {
-      cursor.classList.remove('is-active');
-      visible = false;
-    });
-
-    const hoverable = 'a, button, [data-magnetic], .gallery__item, .dish, .tm__ctrl, .hero__pag-btn, input, textarea, select, label';
-    document.body.addEventListener('mouseover', (e) => {
-      if (e.target.closest && e.target.closest(hoverable)) cursor.classList.add('is-hovering');
-    });
-    document.body.addEventListener('mouseout', (e) => {
-      if (e.target.closest && e.target.closest(hoverable)) cursor.classList.remove('is-hovering');
-    });
-
-    function loop() {
-      cx += (mx - cx) * 0.18;
-      cy += (my - cy) * 0.18;
-      cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-  }
-
-  /* ============================================================
      PAGE TRANSITIONS (curtain)
      ============================================================ */
   function initPageTransitions() {
@@ -648,7 +605,6 @@
     initBeltza();
     initLightbox();
     initTestimonials();
-    initCursor();
     initPageTransitions();
     initBackToTop();
     initWhatsApp();

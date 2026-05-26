@@ -1790,32 +1790,7 @@ em, i { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
   gap: var(--s-3);
 }
 
-/* === 20. CURSOR ================================================= */
-.cursor {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  opacity: 0;
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--cream-soft);
-  border-radius: 50%;
-  transition: width 0.3s var(--ease-out-soft), height 0.3s var(--ease-out-soft), background 0.3s var(--ease-out-soft);
-  transform: translate(-50%, -50%);
-}
-.cursor.is-hovering {
-  width: 64px;
-  height: 64px;
-  background: var(--cream-soft);
-  mix-blend-mode: difference;
-}
-.cursor.is-active {
-  opacity: 1;
-}
-
-/* === 21. PAGE TRANSITION CURTAIN ================================ */
+/* === 20. PAGE TRANSITION CURTAIN ================================ */
 .page-curtain {
   position: fixed;
   inset: 0;
@@ -2212,12 +2187,6 @@ em, i { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
   .hero__title .word { opacity: 1; transform: none; filter: none; }
   [data-reveal] { opacity: 1; transform: none; }
   [data-reveal="image"] { clip-path: inset(0); transform: none; }
-  .cursor { display: none !important; }
-}
-
-/* hide cursor only on fine pointer */
-@media (pointer: coarse), (hover: none) {
-  .cursor { display: none !important; }
 }
 
 /* =================================================================
