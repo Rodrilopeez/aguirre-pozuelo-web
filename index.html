@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aguirre Pozuelo — Taberna contemporánea y casa de comidas en Pozuelo de Alarcón. Solete Repsol, Guía Michelin. Cocina vasco-navarra 100% casera, tienda gourmet, eventos y catering para empresas.">
-  <meta name="keywords" content="restaurante Pozuelo, taberna contemporánea Pozuelo, cocina vasca Madrid, catering empresas Pozuelo, celebraciones Pozuelo, tienda gourmet Pozuelo, Aguirre Pozuelo">
+  <title>Aguirre Pozuelo — Taberna Contemporánea · Solete Repsol · Pozuelo de Alarcón</title>
+  <meta name="description" content="Aguirre Pozuelo, taberna contemporánea y casa de comidas en Pozuelo de Alarcón. Cocina 100% casera de raíces vasco-navarras. Solete Repsol y Guía Michelin. Reservas, carta y tienda gourmet.">
+  <meta name="keywords" content="restaurante Pozuelo, taberna contemporánea Pozuelo, cocina vasca Madrid, Solete Repsol, catering empresas Pozuelo, celebraciones Pozuelo, tienda gourmet Pozuelo, Aguirre Pozuelo">
   <meta name="author" content="Aguirre Place SLU">
-  <meta name="theme-color" content="#C2484E">
+  <meta name="theme-color" content="#7E1F26">
+  <link rel="canonical" href="https://aguirrepozuelo.com/">
 
-  <meta property="og:title" content="Aguirre Pozuelo — Taberna Contemporánea | Solete Repsol">
-  <meta property="og:description" content="Buen comer, buen beber, buen vivir. Cocina 100% casera de raíces vasco-navarras en el corazón de Pozuelo de Alarcón. Reconocidos por Guía Repsol y Guía Michelin.">
-  <meta property="og:type" content="restaurant">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aguirre Pozuelo — Taberna Contemporánea · Solete Repsol">
+  <meta property="og:description" content="Buen comer, buen beber, buen vivir. Cocina 100% casera de raíces vasco-navarras en el corazón de Pozuelo de Alarcón.">
+  <meta property="og:type" content="restaurant.restaurant">
   <meta property="og:url" content="https://aguirrepozuelo.com/">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Salón principal de Aguirre Pozuelo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aguirre Pozuelo — Taberna Contemporánea">
+  <meta name="twitter:description" content="Solete Repsol · Cocina vasco-navarra · Pozuelo de Alarcón">
+  <meta name="twitter:image" content="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg">
 
+  <!-- JSON-LD Restaurant -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
+    "@id": "https://aguirrepozuelo.com/#restaurant",
     "name": "Aguirre Pozuelo",
-    "description": "Taberna contemporánea y casa de comidas con cocina 100% casera de raíces vasco-navarras. Tienda gourmet, eventos y catering para empresas.",
-    "url": "https://aguirrepozuelo.com",
+    "alternateName": "Aguirre — Taberna Contemporánea",
+    "description": "Taberna contemporánea y casa de comidas con cocina 100% casera de raíces vasco-navarras. Tienda gourmet, eventos y catering para empresas. Reconocidos con el Solete Repsol y mencionados en la Guía Michelin.",
+    "url": "https://aguirrepozuelo.com/",
+    "logo": "https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Logo-264x300.png",
+    "image": [
+      "https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg",
+      "https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg",
+      "https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg"
+    ],
     "telephone": "+34911527529",
     "email": "contacto@aguirreplace.es",
     "address": {
@@ -32,416 +52,693 @@
       "addressCountry": "ES"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 40.4337, "longitude": -3.8124 },
+    "hasMap": "https://maps.google.com/?q=Calle+Segundo+Mata+1,+Pozuelo+de+Alarcón,+Madrid",
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "08:15", "closes": "17:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday"], "opens": "08:15", "closes": "00:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "00:00" }
     ],
     "priceRange": "€€",
-    "servesCuisine": ["Vasca", "Navarra", "Contemporánea"],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "bestRating": "5", "reviewCount": "33" }
+    "servesCuisine": ["Vasca", "Navarra", "Contemporánea española"],
+    "acceptsReservations": "True",
+    "hasMenu": [
+      { "@type": "Menu", "name": "Carta de comidas", "url": "https://aguirrepozuelo.com/carta-comida.html" },
+      { "@type": "Menu", "name": "Carta de bebidas", "url": "https://aguirrepozuelo.com/carta-bebidas.html" },
+      { "@type": "Menu", "name": "Carta de desayunos", "url": "https://aguirrepozuelo.com/carta-desayunos.html" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "bestRating": "5", "reviewCount": "33" },
+    "award": ["Solete Repsol 2023", "Guía Michelin"],
+    "sameAs": [
+      "https://www.instagram.com/aguirre_pozuelo",
+      "https://www.youtube.com/@aguirreplace",
+      "https://www.tripadvisor.es/Restaurant_Review-g644357-d23423456-Reviews-Aguirre_Pozuelo-Pozuelo_de_Alarcon.html"
+    ]
   }
   </script>
 
-  <title>Aguirre Pozuelo — Taberna Contemporánea | Solete Repsol | Pozuelo de Alarcón</title>
+  <link rel="icon" type="image/png" href="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Logo-264x300.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://aguirrepozuelo.com" crossorigin>
+  <link rel="preload" as="image" href="https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg" fetchpriority="high">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="canonical" href="https://aguirrepozuelo.com/">
 </head>
 <body>
 
-  <a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:9999;background:var(--color-ink);color:white;padding:12px 20px;font-weight:600;">Saltar al contenido</a>
+  <!-- LOADER (only first visit, JS sets localStorage flag) -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader__logo">Aguirre Pozuelo</span>
+    <span class="loader__line"></span>
+  </div>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="Aguirre Pozuelo — Inicio">
-        <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Logo-264x300.png" alt="Aguirre Pozuelo" style="height:65px;width:auto;">
-      </a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav-main" role="navigation" aria-label="Navegación principal">
-        <a href="index.html">Aguirre</a><a href="nos-inspira.html">Nos inspira</a><a href="eventos.html">Eventos</a><a href="productos.html">Productos</a><a href="carta-comida.html">Carta</a><a href="blog.html">Más Aguirre</a><a href="contacto.html">Contacto</a><a href="contacto.html#booking" class="btn btn--primary">Reservar</a>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- PAGE TRANSITION CURTAIN -->
+  <div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+
+  <!-- SKIP LINK -->
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="site-header__inner">
+      <nav class="site-header__nav-left" aria-label="Navegación principal">
+        <a href="nos-inspira.html">Nos inspira</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="productos.html">Productos</a>
       </nav>
+      <a href="index.html" class="site-header__logo" aria-label="Aguirre Pozuelo — Inicio">
+        <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Logo-264x300.png" alt="Aguirre Pozuelo" width="180" height="200">
+      </a>
+      <nav class="site-header__nav" aria-label="Navegación secundaria">
+        <a href="carta-comida.html">Carta</a>
+        <a href="blog.html">Más Aguirre</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html#booking" class="site-header__cta">Reservar</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===== MAIN ===== -->
-  <main id="main-content">
+  <!-- MOBILE NAV OVERLAY -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nos-inspira.html"><em>Nos</em> inspira</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="carta-comida.html">Carta</a></li>
+      <li><a href="blog.html">Más Aguirre</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="contacto.html#booking"><em>Reservar</em> mesa</a></li>
+    </ul>
+    <div class="mobile-nav__footer">
+      <span>C/ Segundo Mata, 1 · 28224 Pozuelo de Alarcón</span>
+      <a href="tel:+34911527529">+34 911 527 529</a>
+      <a href="mailto:contacto@aguirreplace.es">contacto@aguirreplace.es</a>
+    </div>
+  </nav>
 
-    <!-- HERO — Full Viewport Espectacular con Slideshow -->
-    <section class="hero" id="hero">
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-label="Bienvenida — Aguirre Pozuelo">
       <div class="hero__slides" id="heroSlides">
-        <div class="hero__slide active" style="background-image:url('https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg');"></div>
-        <div class="hero__slide" style="background-image:url('https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg');"></div>
-        <div class="hero__slide" style="background-image:url('https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-2.jpg');"></div>
-        <div class="hero__slide" style="background-image:url('https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-barra.jpg');"></div>
-        <div class="hero__slide" style="background-image:url('https://aguirrepozuelo.com/wp-content/uploads/2025/09/lugar-encuentro-2.jpg');"></div>
+        <div class="hero__slide is-active">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg" alt="Interior del salón principal de Aguirre Pozuelo" class="hero__slide-img" fetchpriority="high">
+        </div>
+        <div class="hero__slide">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg" alt="Detalle del comedor — mesas vestidas y luz cálida" class="hero__slide-img" loading="lazy">
+        </div>
+        <div class="hero__slide">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-barra.jpg" alt="La barra de Aguirre con bandeja de pintxos" class="hero__slide-img" loading="lazy">
+        </div>
+        <div class="hero__slide">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza.jpg" alt="Terraza al aire libre con mesas vestidas" class="hero__slide-img" loading="lazy">
+        </div>
+        <div class="hero__slide">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-2.jpg" alt="Ambiente nocturno del salón principal" class="hero__slide-img" loading="lazy">
+        </div>
+        <div class="hero__slide">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/lugar-encuentro-2.jpg" alt="Detalle de mesa servida — producto vasco-navarro" class="hero__slide-img" loading="lazy">
+        </div>
       </div>
       <div class="hero__overlay"></div>
+      <div class="hero__grain"></div>
+
+      <div class="hero__counter" id="heroCounter">
+        <span id="heroCounterCurrent">01</span>
+        <span class="hero__counter-sep"></span>
+        <span id="heroCounterTotal">06</span>
+      </div>
+
       <div class="hero__content">
-        <p class="hero__pretitle">Pozuelo de Alarcón · Madrid</p>
-        <h1 class="hero__title">Buen comer,<br>buen beber, <em>buen vivir</em></h1>
-        <p class="hero__subtitle">Taberna contemporánea y casa de comidas. Cocina 100% casera con raíces vasco-navarras. Solete Repsol y Guía Michelin.</p>
-        <p class="hero__tagline">Tu lugar de encuentro</p>
+        <span class="hero__eyebrow">Taberna contemporánea · Pozuelo de Alarcón</span>
+        <h1 class="hero__title" data-split>Buen comer, buen beber, <em>buen vivir.</em></h1>
+        <p class="hero__subtitle">Casa de comidas con raíces vasco-navarras. Cocina 100% casera, hospitalidad de antaño y producto que se reconoce a la primera. Reconocidos por la Guía Repsol con el Solete y mencionados en la Guía Michelin.</p>
         <div class="hero__actions">
-          <a href="contacto.html#booking" class="btn btn--primary btn--lg">Reservar mesa</a>
-          <a href="carta-comida.html" class="btn btn--outline-light btn--lg">Ver la carta</a>
-        </div>
-        <div class="hero__trust">
-          <a href="https://aguirrepozuelo.com/publicacion-metropoli-2/" target="_blank" rel="noopener" class="hero__trust-item hero__trust-item--link" title="Solete Repsol">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/logo-solete-repsol.jpeg" alt="Solete" class="hero__trust-badge">
-          </a>
-          <span class="hero__trust-sep">·</span>
-          <span class="hero__trust-item">Guía Michelin</span>
-          <span class="hero__trust-sep">·</span>
-          <a href="https://aguirrepozuelo.com/canal-cocina-visita-aguirre/" target="_blank" rel="noopener" class="hero__trust-item hero__trust-item--link" title="Canal Cocina">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/03/canal-cocina-visita-Aguirre-Pozuelo.jpg" alt="Canal Cocina" class="hero__trust-badge hero__trust-badge--round">
-          </a>
-          <span class="hero__trust-sep">·</span>
-          <a href="https://www.tripadvisor.es/Restaurant_Review-g644357-d23423456-Reviews-Aguirre_Pozuelo-Pozuelo_de_Alarcon.html" target="_blank" rel="noopener" class="hero__trust-item hero__trust-item--link" title="TripAdvisor">
-            <span class="hero__trust-stars">★★★★★</span>
-            <span>4.7</span>
-          </a>
-          <span class="hero__trust-sep">·</span>
-          <a href="carta-comida.html" class="hero__trust-item hero__trust-item--link">Precio medio <strong class="hero__trust-price">25-35€</strong></a>
+          <a href="contacto.html#booking" class="btn btn--primary btn--lg" data-magnetic>Reservar mesa</a>
+          <a href="carta-comida.html" class="btn btn--outline-light btn--lg" data-magnetic>Ver la carta</a>
         </div>
       </div>
-      <div class="hero__dots" id="heroDots"></div>
-      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Anterior">&#8249;</button>
-      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Siguiente">&#8250;</button>
-      <div class="hero__scroll">
-        <span>Descubre</span>
+
+      <div class="hero__pagination" id="heroPagination" role="tablist" aria-label="Diapositivas">
+        <button class="hero__pag-btn is-active" data-slide="0" aria-label="Diapositiva 1"></button>
+        <button class="hero__pag-btn" data-slide="1" aria-label="Diapositiva 2"></button>
+        <button class="hero__pag-btn" data-slide="2" aria-label="Diapositiva 3"></button>
+        <button class="hero__pag-btn" data-slide="3" aria-label="Diapositiva 4"></button>
+        <button class="hero__pag-btn" data-slide="4" aria-label="Diapositiva 5"></button>
+        <button class="hero__pag-btn" data-slide="5" aria-label="Diapositiva 6"></button>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span>Descubre</span></div>
+
+      <!-- Marquee fijo al pie del hero -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item marquee__item--gold">Solete Repsol 2023</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Mencionados en la Guía Michelin</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Canal Cocina</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Metrópoli · El Mundo</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Madrid Secreto</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item marquee__item--gold">★ 4.7 TripAdvisor</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Nuevo Estilo</span><span class="marquee__item"><span class="diamond"></span></span>
+          <!-- duplicado para loop -->
+          <span class="marquee__item marquee__item--gold">Solete Repsol 2023</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Mencionados en la Guía Michelin</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Canal Cocina</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Metrópoli · El Mundo</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Madrid Secreto</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item marquee__item--gold">★ 4.7 TripAdvisor</span><span class="marquee__item"><span class="diamond"></span></span>
+          <span class="marquee__item">Nuevo Estilo</span><span class="marquee__item"><span class="diamond"></span></span>
+        </div>
       </div>
     </section>
 
-    <!-- PRESS BAR — Reconocimientos -->
-    <div class="press-bar">
-      <div class="press-bar-inner container--wide">
-        <a href="https://aguirrepozuelo.com/publicacion-metropoli-2/" target="_blank" rel="noopener" class="press-bar-item press-bar-item--link" title="Ver reconocimiento Solete Repsol">
-          <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/logo-solete-repsol.jpeg" alt="Solete Repsol" class="press-bar-badge">
-          <span>Solete Repsol 2023</span>
-        </a>
-        <span class="press-bar-divider"></span>
-        <span class="press-bar-item">
-          <span class="press-bar-icon">◆</span>
-          <span>Guía Michelin</span>
-        </span>
-        <span class="press-bar-divider"></span>
-        <a href="https://aguirrepozuelo.com/canal-cocina-visita-aguirre/" target="_blank" rel="noopener" class="press-bar-item press-bar-item--link" title="Ver visita de Canal Cocina">
-          <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/03/canal-cocina-visita-Aguirre-Pozuelo.jpg" alt="Canal Cocina" class="press-bar-badge press-bar-badge--round">
-          <span>Canal Cocina</span>
-        </a>
-        <span class="press-bar-divider"></span>
-        <a href="https://aguirrepozuelo.com/publicacion-metropoli/" target="_blank" rel="noopener" class="press-bar-item press-bar-item--link" title="Ver artículo en Metrópoli">
-          <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/logo-metropoli-2-1.jpg" alt="Metrópoli" class="press-bar-badge">
-          <span>Metrópoli · El Mundo</span>
-        </a>
-        <span class="press-bar-divider"></span>
-        <span class="press-bar-item">
-          <span class="press-bar-icon">Madrid<br>Secreto</span>
-        </span>
-        <span class="press-bar-divider"></span>
-        <span class="press-bar-item">
-          <span class="press-bar-icon">Nuevo<br>Estilo</span>
-        </span>
-      </div>
-    </div>
-
-    <!-- AMBIANCE STRIP -->
-    <section class="section" style="padding-bottom:0;">
+    <!-- ============ INTRO ============ -->
+    <section class="section section--paper">
       <div class="container">
-        <div class="ambiance-strip">
-          <div class="ambiance-strip__item reveal reveal--up">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg"
-                 alt="Interior de Aguirre Pozuelo — Salón principal acogedor"
-                 loading="lazy">
+        <div class="intro">
+          <div data-reveal>
+            <span class="eyebrow">La casa</span>
+            <p class="intro__lead">Una taberna donde <em>la mesa</em> sigue siendo lugar de encuentro, conversación y celebración — como entonces, pero hecho hoy.</p>
           </div>
-          <div class="ambiance-strip__item reveal reveal--up reveal--d2">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-2.jpg"
-                 alt="Terraza de Aguirre Pozuelo — Espacio exterior"
-                 loading="lazy">
-          </div>
-          <div class="ambiance-strip__item reveal reveal--up reveal--d3">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza.jpg"
-                 alt="Detalle de mesa en Aguirre Pozuelo — Cocina con mimo"
-                 loading="lazy">
+          <div class="intro__body" data-reveal>
+            <p>Aguirre Pozuelo es una <strong>casa de comidas contemporánea</strong> con corazón vasco-navarro. Producto, mimo y oficio. Lo que se come y lo que se bebe está hecho aquí — y se nota.</p>
+            <p>Detrás, una <strong>historia familiar</strong> que arranca en 1906 en Lesaka y atraviesa San Sebastián. Delante, el interiorismo cálido de Alex D'Alessio y la cocina honesta de Teresa.</p>
+            <div class="intro__meta">
+              <div class="intro__meta-item">
+                <span class="intro__meta-label">Reconocimiento</span>
+                <span class="intro__meta-value">Solete Repsol 2023</span>
+              </div>
+              <div class="intro__meta-item">
+                <span class="intro__meta-label">Precio medio</span>
+                <span class="intro__meta-value">25–35 €</span>
+              </div>
+              <div class="intro__meta-item">
+                <span class="intro__meta-label">Valoración</span>
+                <span class="intro__meta-value">★ 4.7 / 5</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STAR DISHES -->
-    <section class="section">
+    <!-- ============ STAR DISHES ============ -->
+    <section class="section section--cream">
       <div class="container">
-        <div class="section-header section-header--center">
-          <span class="section-label">Nuestros imprescindibles</span>
+        <div class="section-header section-header--center" data-reveal>
+          <span class="eyebrow eyebrow--center">Nuestros imprescindibles</span>
           <h2 class="section-title">Platos que nos definen</h2>
-          <p class="section-subtitle">La cocina de Aguirre es tradición, producto y mimo. Estos son los platos que nuestros clientes recomiendan una y otra vez.</p>
+          <p class="section-subtitle">No son los más vistos en Instagram. Son los que los nuestros piden cada vez que vuelven.</p>
         </div>
-        <div class="star-dishes-grid">
-          <article class="star-dish-card reveal">
-            <div class="star-dish-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/gildas.jpg"
-                   alt="Gilda Vitaminada — Pintxo donostiarra con anchoa, piparra y aceituna"
-                   loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+
+        <div class="dishes" data-stagger>
+          <article class="dish dish--xl" data-reveal>
+            <div class="dish__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/gildas.jpg" alt="Gilda Vitaminada — pintxo donostiarra con anchoa, piparra y aceituna" loading="lazy" decoding="async">
             </div>
-            <div class="star-dish-info">
-              <h3>Gilda Vitaminada</h3>
-              <p>Nuestra versión del clásico pintxo donostiarra, con anchoa del Cantábrico, piparra y aceituna. El bocado que abre el apetito.</p>
-              <span class="star-dish-price">Desde 3,50€</span>
-            </div>
-          </article>
-          <article class="star-dish-card reveal">
-            <div class="star-dish-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/gildas-1.jpg"
-                   alt="Pintxos de Aguirre Pozuelo — Cocina vasco-navarra"
-                   loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-            </div>
-            <div class="star-dish-info">
-              <h3>Croquetas de Cecina</h3>
-              <p>Cremosas por dentro, crujientes por fuera. Elaboradas con cecina de León y bechamel casera. Nuestro plato más elogiado.</p>
-              <span class="star-dish-price">Desde 10€</span>
+            <div class="dish__body">
+              <span class="dish__index">01 · Pintxo</span>
+              <h3 class="dish__name">Gilda Vitaminada</h3>
+              <p class="dish__desc">Nuestra versión del clásico donostiarra. Anchoa del Cantábrico, piparra y aceituna manzanilla. El bocado que abre el apetito y la conversación.</p>
+              <div class="dish__price">Desde 3,50 €</div>
             </div>
           </article>
-          <article class="star-dish-card reveal">
-            <div class="star-dish-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg"
-                   alt="Interior de Aguirre Pozuelo — Ambiente acogedor para disfrutar de nuestros postres"
-                   loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+
+          <article class="dish dish--md" data-reveal>
+            <div class="dish__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/gildas-1.jpg" alt="Croquetas de cecina — cremosas por dentro, crujientes por fuera" loading="lazy" decoding="async">
             </div>
-            <div class="star-dish-info">
-              <h3>Tarta de Queso con Helado de Idiazábal</h3>
-              <p>La cheesecake que cierra la experiencia. Cremosa, con el toque ahumado del queso Idiazábal. "De caerse muerta", dicen.</p>
-              <span class="star-dish-price">Desde 8€</span>
+            <div class="dish__body">
+              <span class="dish__index">02 · Frito</span>
+              <h3 class="dish__name">Croquetas de Cecina</h3>
+              <p class="dish__desc">Cremosas por dentro, crujientes por fuera. Cecina de León y bechamel hecha cada mañana. El plato más repetido de la carta.</p>
+              <div class="dish__price">Desde 10 €</div>
             </div>
           </article>
-        </div>
-        <div style="text-align:center;margin-top:var(--space-3xl);">
-          <a href="carta-comida.html" class="btn btn--outline btn--lg">Ver carta completa</a>
+
+          <article class="dish dish--sm" data-reveal>
+            <div class="dish__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg" alt="Plato de temporada — producto vasco-navarro" loading="lazy" decoding="async">
+            </div>
+            <div class="dish__body">
+              <span class="dish__index">03 · Postre</span>
+              <h3 class="dish__name">Tarta de Queso con Idiazábal</h3>
+              <p class="dish__desc">Cremosa, ahumada, con el toque preciso del queso Idiazábal. La que cierra la experiencia. <em>«De caerse muerta»</em>, dicen.</p>
+              <div class="dish__price">Desde 8 €</div>
+            </div>
+          </article>
+
+          <article class="dish dish--lg" data-reveal>
+            <div class="dish__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg" alt="Mesa servida con producto vasco-navarro" loading="lazy" decoding="async">
+            </div>
+            <div class="dish__body">
+              <span class="dish__index">+ · Mesa</span>
+              <h3 class="dish__name">Y todo lo demás de la carta</h3>
+              <p class="dish__desc">Tomate con bonito, ensaladilla de la casa, bocadillo de pollo crujiente, alcachofas de temporada, arroz cremoso de carrillera… Producto y oficio, sin atajos.</p>
+              <a href="carta-comida.html" class="btn-arrow" style="margin-top: 4px;">Ver la carta completa
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- BELTZA STORY -->
+    <!-- ============ BELTZA STORY (scrollytelling) ============ -->
+    <section class="beltza section--paper" id="beltza">
+      <div class="container">
+        <div class="section-header" data-reveal style="margin-bottom: var(--s-8);">
+          <span class="eyebrow">Nos inspira</span>
+          <h2 class="section-title">La historia de Beltza</h2>
+        </div>
+
+        <div class="beltza__inner">
+          <div class="beltza__sticky" id="beltzaSticky" aria-hidden="true">
+            <div class="beltza__sticky-img is-active" data-chapter="0">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg" alt="Paisaje de Lesaka, Navarra" loading="lazy">
+            </div>
+            <div class="beltza__sticky-img" data-chapter="1">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-2.jpg" alt="Interior con calidez de fonda antigua" loading="lazy">
+            </div>
+            <div class="beltza__sticky-img" data-chapter="2">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-barra.jpg" alt="La barra de Aguirre" loading="lazy">
+            </div>
+            <div class="beltza__sticky-caption is-active" id="beltzaCaption">1906 · Lesaka, Navarra</div>
+          </div>
+
+          <div class="beltza__chapters">
+            <article class="beltza__chapter" data-chapter="0" data-reveal>
+              <span class="beltza__chapter-num">Capítulo I</span>
+              <h3>Víctor Martínez, apodado <em>Beltza</em>.</h3>
+              <p>«Negro» en euskera. Nació en 1906 en Lesaka, un pueblo navarro encajado entre montañas, a un paso de la frontera. Se crió entre fogones en La Fonda María — el sitio donde sin saberlo aprendió que cocinar bien es, sobre todo, cocinar a los demás.</p>
+            </article>
+
+            <article class="beltza__chapter" data-chapter="1" data-reveal>
+              <span class="beltza__chapter-num">Capítulo II</span>
+              <h3>Cruzó la frontera para <em>formarse</em> en la alta cocina francesa.</h3>
+              <p>Volvió convertido en algo nuevo: primer jefe de cocina del legendario Hotel Londres de San Sebastián. Mezcló la técnica francesa con el producto vasco-navarro y eso, en los años 30, era una pequeña revolución.</p>
+              <blockquote>«Beltza deleitó a gourmets de todo el mundo con los sabores de nuestra tierra.»</blockquote>
+            </article>
+
+            <article class="beltza__chapter" data-chapter="2" data-reveal>
+              <span class="beltza__chapter-num">Capítulo III</span>
+              <h3>Hoy, su legado <em>respira</em> en Aguirre.</h3>
+              <p>El amor por el producto, la hospitalidad de antaño y la mezcla franco-vasca que Beltza llevó al Hotel Londres son las raíces de lo que cocinamos en Pozuelo. No imitamos su carta — heredamos su manera de entender la mesa.</p>
+              <a href="nos-inspira.html" class="btn-arrow" style="margin-top: var(--s-4);">Lee la historia completa
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA BENTO ============ -->
     <section class="section section--cream">
+      <div class="container container--wide">
+        <div class="section-header section-header--center" data-reveal>
+          <span class="eyebrow eyebrow--center">La casa</span>
+          <h2 class="section-title">Un lugar para detenerse</h2>
+          <p class="section-subtitle">Salón principal, terraza, barra y cocina. Espacios pensados por Alex D'Alessio para que el tiempo, dentro de Aguirre, transcurra distinto.</p>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <button class="gallery__item gallery__item--a" data-img="https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg" aria-label="Ver salón principal">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/AGUIRRE_POZUELO_20250509_098-scaled.jpg" alt="Salón principal" loading="lazy" decoding="async">
+            <span class="gallery__caption">Salón principal</span>
+          </button>
+          <button class="gallery__item gallery__item--b" data-img="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-2.jpg" aria-label="Ver terraza al atardecer">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-2.jpg" alt="Terraza al atardecer" loading="lazy" decoding="async">
+            <span class="gallery__caption">Terraza · atardecer</span>
+          </button>
+          <button class="gallery__item gallery__item--c" data-img="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-barra.jpg" aria-label="Ver barra de pintxos">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-barra.jpg" alt="Barra de pintxos" loading="lazy" decoding="async">
+            <span class="gallery__caption">Barra</span>
+          </button>
+          <button class="gallery__item gallery__item--d" data-img="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg" aria-label="Ver detalle de mesa">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg" alt="Detalle de mesa" loading="lazy" decoding="async">
+            <span class="gallery__caption">Detalle de mesa</span>
+          </button>
+          <button class="gallery__item gallery__item--e" data-img="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg" aria-label="Ver comedor">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-Pozuelo-Home-Slider-1.jpg" alt="Comedor" loading="lazy" decoding="async">
+            <span class="gallery__caption">Comedor</span>
+          </button>
+          <button class="gallery__item gallery__item--f" data-img="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-risas.jpg" aria-label="Ver celebración en terraza">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-risas.jpg" alt="Celebración en terraza" loading="lazy" decoding="async">
+            <span class="gallery__caption">Celebraciones</span>
+          </button>
+          <button class="gallery__item gallery__item--g" data-img="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza.jpg" aria-label="Ver terraza de día">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza.jpg" alt="Terraza de día" loading="lazy" decoding="async">
+            <span class="gallery__caption">Terraza de día</span>
+          </button>
+          <button class="gallery__item gallery__item--h" data-img="https://aguirrepozuelo.com/wp-content/uploads/2025/09/lugar-encuentro-2.jpg" aria-label="Ver lugar de encuentro">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/lugar-encuentro-2.jpg" alt="Lugar de encuentro" loading="lazy" decoding="async">
+            <span class="gallery__caption">Lugar de encuentro</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="events section--paper">
       <div class="container">
-        <div class="story-content">
-          <div class="story-image reveal">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-claim.jpg"
-                 alt="Ambiente de Aguirre Pozuelo — La tierra que inspiró a Beltza"
-                 loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        <div class="events__intro" data-reveal>
+          <div>
+            <span class="eyebrow">Eventos y celebraciones</span>
+            <h2 class="section-title" style="margin-bottom: var(--s-4);">Celebra con <em>Aguirre.</em></h2>
           </div>
-          <div class="story-text reveal">
-            <span class="section-label">Nos inspira</span>
-            <h2 class="section-title">La historia de Beltza</h2>
-            <p style="font-size:1.05rem;line-height:1.8;color:var(--color-stone);margin-bottom:var(--space-lg);">
-              <strong>Víctor Martínez</strong>, apodado <em>Beltza</em> ("negro" en euskera), nació en 1906 en Lesaka, Navarra. Se crió entre fogones en La Fonda María y, con los años, cruzó la frontera para formarse en la alta cocina francesa.
-            </p>
-            <p style="font-size:1.05rem;line-height:1.8;color:var(--color-stone);margin-bottom:var(--space-lg);">
-              Regresó a San Sebastián convertido en el primer jefe de cocina del legendario <strong>Hotel Londres</strong>. Su legado de cocina vasco-francesa, amor por el producto y hospitalidad de antaño es lo que hoy respiramos en Aguirre.
-            </p>
-            <blockquote>"Beltza deleitó a gourmets de todo el mundo con los sabores de nuestra tierra."</blockquote>
-            <a href="nos-inspira.html" class="btn btn--outline">Conoce la historia completa</a>
+          <div>
+            <p class="section-subtitle">Cumpleaños, reuniones familiares, comidas de empresa, catering, cócteles… Somos felices ayudando a los demás a disfrutar. Así de simple.</p>
+          </div>
+        </div>
+
+        <div class="events__cards" data-stagger>
+          <article class="event-card" data-reveal>
+            <div class="event-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 6h16v10c0 4.4-3.6 8-8 8s-8-3.6-8-8V6Z"/>
+                <path d="M24 24v14"/>
+                <path d="M14 42h20"/>
+                <path d="M16 6a4 4 0 0 1-4 4"/>
+                <path d="M32 6a4 4 0 0 0 4 4"/>
+              </svg>
+            </div>
+            <h4>Celebraciones privadas</h4>
+            <p>Cumpleaños, aniversarios, bautizos, comuniones, bodas íntimas, reencuentros familiares. Diseñamos cada celebración a medida y la cuidamos como si fuese de casa.</p>
+          </article>
+
+          <article class="event-card" data-reveal>
+            <div class="event-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="32" rx="1"/>
+                <path d="M6 8 24 26 42 8"/>
+                <path d="M14 28v8"/>
+                <path d="M34 28v8"/>
+                <path d="M6 40h36"/>
+              </svg>
+            </div>
+            <h4>Catering para empresas</h4>
+            <p>Coffee breaks, vino español, cócteles, buffets, comidas de trabajo, eventos corporativos. Te llevamos Aguirre donde lo necesites, con la misma cocina 100% casera.</p>
+          </article>
+
+          <article class="event-card" data-reveal>
+            <div class="event-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8 26v-2a16 16 0 0 1 32 0v2"/>
+                <rect x="6" y="26" width="8" height="12" rx="2"/>
+                <rect x="34" y="26" width="8" height="12" rx="2"/>
+                <path d="M14 32h2"/>
+                <path d="M32 32h2"/>
+              </svg>
+            </div>
+            <h4>Servicios complementarios</h4>
+            <p>DJ, cortador de jamón a domicilio, coctelería con barman, fotografía y vídeo del evento, decoración floral. Coordinamos todo desde un único interlocutor.</p>
+          </article>
+        </div>
+
+        <div class="events__cta" data-reveal>
+          <div class="events__cta-bg">
+            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-risas.jpg" alt="Celebración en la terraza de Aguirre Pozuelo" loading="lazy">
+          </div>
+          <div class="events__cta-content">
+            <h3>Cuéntanos qué quieres <em>celebrar.</em></h3>
+            <p>Sin compromiso. Te llamamos, escuchamos lo que tienes en mente y te mandamos una propuesta con menú, espacio y presupuesto en menos de 48 horas.</p>
+            <div style="display: flex; gap: var(--s-3); flex-wrap: wrap;">
+              <a href="eventos.html" class="btn btn--ghost">Ver opciones</a>
+              <a href="contacto.html" class="btn btn--outline-light">Solicitar presupuesto</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ONGI ETORRI -->
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="tm" aria-label="Lo que dicen nuestros clientes">
+      <div class="container">
+        <div class="tm__quote-mark" aria-hidden="true">"</div>
+        <div class="tm__inner">
+          <div class="tm__progress" aria-hidden="true">
+            <div class="tm__progress-bar" id="tmProgressBar"></div>
+          </div>
+
+          <div class="tm__slides" id="tmSlides">
+            <div class="tm__slide is-active" data-tm="0">
+              <p class="tm__text">«Nos ha encantado. Hacía falta un lugar así en la zona. El tomate con bonito y las alcachofas, exquisitas. Y la tienda de productos seleccionados, una maravilla.»</p>
+              <div class="tm__footer-block">
+                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Nicolas-Sztejfman-Rossi.png" alt="Nicolás Sztejfman Rossi" loading="lazy"></div>
+                <span class="tm__author">Nicolás Sztejfman Rossi</span>
+                <span class="tm__stars">★★★★★</span>
+              </div>
+            </div>
+
+            <div class="tm__slide" data-tm="1">
+              <p class="tm__text">«Qué maravilla este nuevo lugar en Pozuelo. La comida de caerse muerta. Teresa transmite el amor por la cocina a cada momento. Una oda para los disfrutones.»</p>
+              <div class="tm__footer-block">
+                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Patricia-Silva.png" alt="Patricia Silva" loading="lazy"></div>
+                <span class="tm__author">Patricia Silva</span>
+                <span class="tm__stars">★★★★★</span>
+              </div>
+            </div>
+
+            <div class="tm__slide" data-tm="2">
+              <p class="tm__text">«Celebramos un cumpleaños familiar y todo fue genial. Las croquetas de cecina y la ensaladilla, espectaculares. La terraza es muy grande, tranquila y agradable.»</p>
+              <div class="tm__footer-block">
+                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Marisol-CP.png" alt="Marisol CP" loading="lazy"></div>
+                <span class="tm__author">Marisol CP</span>
+                <span class="tm__stars">★★★★★</span>
+              </div>
+            </div>
+
+            <div class="tm__slide" data-tm="3">
+              <p class="tm__text">«Es un sitio estupendo, me encanta a cualquier hora del día. Calidad, profesionalidad y un ambiente acogedor. Todos los ingredientes para disfrutar.»</p>
+              <div class="tm__footer-block">
+                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Maria-Jose.png" alt="María José González" loading="lazy"></div>
+                <span class="tm__author">María José González</span>
+                <span class="tm__stars">★★★★★</span>
+              </div>
+            </div>
+
+            <div class="tm__slide" data-tm="4">
+              <p class="tm__text">«Las croquetas de jamón y cecina, exquisitas. El bocadillo de pollo crujiente y la tarta de queso con toque de Idiazábal son imperdibles. Precios medios, repetiremos.»</p>
+              <div class="tm__footer-block">
+                <div class="tm__avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2023/02/Cristina-M-Ponce.png" alt="Cristina Martínez Ponce" loading="lazy"></div>
+                <span class="tm__author">Cristina Martínez Ponce</span>
+                <span class="tm__stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tm__controls">
+            <button class="tm__ctrl" id="tmPrev" aria-label="Reseña anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="tm__ctrl" id="tmNext" aria-label="Siguiente reseña">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POSTS / PRESS PREVIEW ============ -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-header section-header--center" data-reveal style="margin-bottom: var(--s-8);">
+          <span class="eyebrow eyebrow--center">Más Aguirre</span>
+          <h2 class="section-title">Lo que dicen, lo que cocinamos.</h2>
+        </div>
+
+        <div class="posts" data-stagger>
+          <article class="post" data-reveal>
+            <div class="post__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/logo-solete-repsol.jpeg" alt="Solete Repsol — reconocimiento gastronómico" loading="lazy" style="object-fit: contain; background: var(--ink-deep); padding: 2rem;">
+            </div>
+            <div class="post__body">
+              <span class="post__meta">Agosto 2023 · Reconocimiento</span>
+              <h3 class="post__title">Solete Repsol — Logramos el reconocimiento de la Guía Repsol</h3>
+              <p class="post__excerpt">Madrid Secreto y El Español destacan a Aguirre Pozuelo como una de las joyas culinarias de la zona oeste de Madrid.</p>
+              <a href="blog.html" class="post__link">Leer
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="post" data-reveal>
+            <div class="post__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/WEB-METROPOLI-NOTICIAS-AGUIRRE-1-119x300.jpg" alt="Recorte de Metrópoli sobre Aguirre Pozuelo" loading="lazy" style="object-fit: contain; background: var(--cream); padding: 1.5rem;">
+            </div>
+            <div class="post__body">
+              <span class="post__meta">Agosto 2023 · Prensa</span>
+              <h3 class="post__title">Metrópoli nos elige entre los 8 mejores sitios para comer este verano</h3>
+              <p class="post__excerpt">El suplemento gastronómico de El Mundo nos selecciona entre los lugares imprescindibles del verano madrileño.</p>
+              <a href="blog.html" class="post__link">Leer
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="post" data-reveal>
+            <div class="post__media">
+              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/03/canal-cocina-visita-Aguirre-Pozuelo.jpg" alt="Canal Cocina visita Aguirre Pozuelo" loading="lazy">
+            </div>
+            <div class="post__body">
+              <span class="post__meta">Marzo 2023 · Televisión</span>
+              <h3 class="post__title">Canal Cocina visita Aguirre</h3>
+              <p class="post__excerpt">El equipo de Canal Cocina vino a conocer nuestros fogones. Porque nadie mejor que ellos para contar lo que hacemos.</p>
+              <a href="blog.html" class="post__link">Leer
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
     <section class="section section--cream">
-      <div class="container container--narrow" style="text-align:center;">
-        <span class="section-label">Ongi etorri</span>
-        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">Bienvenidos a esta casa</h2>
-        <p style="font-family:var(--font-accent);font-size:1.15rem;color:var(--color-stone);font-style:italic;max-width:600px;margin:0 auto var(--space-xl);line-height:1.7;">
-          Un lugar de encuentro, un lugar donde poder comprar, un lugar para celebrar.<br>
-          Como en casa, pero con Solete Repsol.
-        </p>
-        <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;justify-content:center;">
-          <a href="contacto.html#booking" class="btn btn--primary btn--lg">Reservar mesa</a>
-          <a href="productos.html" class="btn btn--outline btn--lg">Nuestra tienda</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- EVENTS -->
-    <section class="section">
-      <div class="container">
-        <div class="events-highlight">
-          <div class="reveal">
-            <span class="section-label">Eventos y Celebraciones</span>
-            <h2 class="section-title">Celebra con Aguirre</h2>
-            <p style="font-size:1.05rem;color:var(--color-stone);margin-bottom:var(--space-xl);">
-              Somos felices ayudando a los demás a disfrutar. Así de simple. Cumpleaños, reuniones familiares, eventos de empresa y mucho más, siempre con cocina 100% casera.
-            </p>
-            <div class="events-list">
-              <div class="event-type"><span class="event-type-icon">🎂</span><div><h4>Celebraciones privadas</h4><p>Cumpleaños, reuniones familiares, reencuentros, bodas íntimas</p></div></div>
-              <div class="event-type"><span class="event-type-icon">🏢</span><div><h4>Catering para empresas</h4><p>Coffee break, vino español, cóctel, buffet, comidas de trabajo</p></div></div>
-              <div class="event-type"><span class="event-type-icon">🎧</span><div><h4>Servicios complementarios</h4><p>DJ, cortador de jamón, coctelero, fotógrafo y vídeo para tu evento</p></div></div>
-            </div>
-            <div style="margin-top:var(--space-xl);display:flex;gap:var(--space-md);flex-wrap:wrap;">
-              <a href="eventos.html" class="btn btn--primary">Celebra con Aguirre</a>
-              <a href="contacto.html" class="btn btn--outline">Solicitar presupuesto</a>
-            </div>
+      <div class="container container--narrow" style="max-width: 1100px;">
+        <div class="newsletter" data-reveal>
+          <div>
+            <h2 class="newsletter__title">Recibe lo que <em>cocinamos.</em></h2>
+            <p class="newsletter__desc">Newsletter mensual con nuevos platos, eventos, productos de la tienda y alguna receta. Sin spam — solo cosas ricas.</p>
           </div>
-          <div class="events-highlight-image reveal">
-            <img src="https://aguirrepozuelo.com/wp-content/uploads/2025/09/terraza-risas.jpg"
-                 alt="Celebración en Aguirre Pozuelo — Eventos, cumpleaños y catering en nuestra terraza"
-                 loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section section--cream">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <span class="section-label">Qué dicen de nosotros</span>
-          <h2 class="section-title">Clientes que repiten</h2>
-          <p class="section-subtitle">No lo decimos nosotros, lo dicen ellos. 4.7 sobre 5 en TripAdvisor.</p>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card reveal"><div class="testimonial-header"><div class="testimonial-avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Nicolas-Sztejfman-Rossi.png" alt="Nicolás Sztejfman Rossi" loading="lazy"></div><div><div class="testimonial-name">Nicolás Sztejfman Rossi</div><div class="testimonial-stars">★★★★★</div></div></div><p class="testimonial-text">"Nos ha encantado!!! Hacía falta un lugar así en la zona. El tomate con bonito y las alcachofas exquisitas. Y la tienda de productos seleccionados, una maravilla."</p></div>
-          <div class="testimonial-card reveal"><div class="testimonial-header"><div class="testimonial-avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Patricia-Silva.png" alt="Patricia Silva" loading="lazy"></div><div><div class="testimonial-name">Patricia Silva</div><div class="testimonial-stars">★★★★★</div></div></div><p class="testimonial-text">"Qué maravilla este nuevo lugar en Pozuelo. La comida de caerse muerta. Teresa transmite el amor por la cocina a cada momento. Una oda para los disfrutones."</p></div>
-          <div class="testimonial-card reveal"><div class="testimonial-header"><div class="testimonial-avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Marisol-CP.png" alt="Marisol CP" loading="lazy"></div><div><div class="testimonial-name">Marisol CP</div><div class="testimonial-stars">★★★★★</div></div></div><p class="testimonial-text">"Maravilla de sitio. Celebramos un cumpleaños familiar y todo fue genial. Las croquetas de cecina y la ensaladilla, espectaculares. La terraza es muy grande, tranquila y agradable."</p></div>
-          <div class="testimonial-card reveal"><div class="testimonial-header"><div class="testimonial-avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Maria-Jose.png" alt="María José González" loading="lazy"></div><div><div class="testimonial-name">María José González</div><div class="testimonial-stars">★★★★★</div></div></div><p class="testimonial-text">"Es un sitio estupendo, me encanta a cualquier hora del día. Tiene todos los ingredientes para disfrutar: calidad, profesionalidad y un ambiente acogedor."</p></div>
-          <div class="testimonial-card reveal"><div class="testimonial-header"><div class="testimonial-avatar"><img src="https://aguirrepozuelo.com/wp-content/uploads/2023/02/Cristina-M-Ponce.png" alt="Cristina Martínez Ponce" loading="lazy"></div><div><div class="testimonial-name">Cristina Martínez Ponce</div><div class="testimonial-stars">★★★★★</div></div></div><p class="testimonial-text">"Las croquetas de jamón y cecina estaban exquisitas. El bocadillo de pollo crujiente y la tarta de queso con toque de Idiazábal son imperdibles. Precios medios, repetiremos."</p></div>
-        </div>
-        <div style="text-align:center;margin-top:var(--space-2xl);">
-          <a href="https://www.tripadvisor.es/Restaurant_Review-g644357-d23423456-Reviews-Aguirre_Pozuelo-Pozuelo_de_Alarcon.html" class="btn btn--outline" target="_blank" rel="noopener">Ver más reseñas en TripAdvisor</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOG PREVIEW -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <span class="section-label">Más Aguirre</span>
-          <h2 class="section-title">Reportajes, artículos, cocina...</h2>
-          <p class="section-subtitle">Historias desde nuestros fogones y más allá.</p>
-        </div>
-        <div class="blog-grid">
-          <article class="blog-card reveal">
-            <div class="blog-card-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/logo-solete-repsol.jpeg"
-                   alt="Solete Repsol — Reconocimiento gastronómico a Aguirre Pozuelo"
-                   loading="lazy" style="width:100%;height:100%;object-fit:contain;background:#1a1a1a;padding:1rem;">
+          <form class="newsletter__form" data-ajax>
+            <div class="newsletter__input">
+              <input type="email" required placeholder="tu@correo.com" aria-label="Tu correo electrónico">
+              <button type="submit">Suscribirme</button>
             </div>
-            <div class="blog-card-body">
-              <div class="blog-card-date">Agosto 2023 — Noticias</div>
-              <h3>Logramos un Solete: Reconocimiento en la Guía Repsol</h3>
-              <p>Celebramos nuestro Solete Repsol, destacado por Madrid Secreto y El Español como una de las joyas culinarias de la zona.</p>
-              <a href="blog.html" style="font-size:0.8rem;font-weight:600;">Leer más →</a>
-            </div>
-          </article>
-          <article class="blog-card reveal">
-            <div class="blog-card-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/08/WEB-METROPOLI-NOTICIAS-AGUIRRE-1-119x300.jpg"
-                   alt="Metrópoli recomienda Aguirre Pozuelo entre los mejores restaurantes del verano"
-                   loading="lazy" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:1rem;">
-            </div>
-            <div class="blog-card-body">
-              <div class="blog-card-date">Agosto 2023 — Noticias</div>
-              <h3>Metrópoli nos recomienda como uno de los 8 mejores sitios para comer este verano</h3>
-              <p>El suplemento de El Mundo nos selecciona entre los mejores lugares para disfrutar de la gastronomía estival.</p>
-              <a href="blog.html" style="font-size:0.8rem;font-weight:600;">Leer más →</a>
-            </div>
-          </article>
-          <article class="blog-card reveal">
-            <div class="blog-card-image">
-              <img src="https://aguirrepozuelo.com/wp-content/uploads/2023/03/canal-cocina-visita-Aguirre-Pozuelo.jpg"
-                   alt="Canal Cocina visita los fogones de Aguirre Pozuelo"
-                   loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-            </div>
-            <div class="blog-card-body">
-              <div class="blog-card-date">Marzo 2023 — Noticias</div>
-              <h3>Canal Cocina visita Aguirre</h3>
-              <p>Nuestros amigos de Canal Cocina vinieron a conocer nuestros fogones. Porque nadie mejor que ellos para contar lo que hacemos.</p>
-              <a href="blog.html" style="font-size:0.8rem;font-weight:600;">Leer más →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="newsletter-box reveal">
-          <h2>Recibe nuestras novedades</h2>
-          <p>Apúntate a nuestra newsletter y sé el primero en conocer nuevos platos, eventos y productos de la tienda. Sin spam, solo cosas ricas.</p>
-          <form class="newsletter-form" data-ajax>
-            <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico para newsletter">
-            <button type="submit" class="btn">Suscribirme</button>
+            <p class="newsletter__legal">Al suscribirte aceptas nuestra <a href="politica-privacidad.html">política de privacidad</a>. Te puedes dar de baja cuando quieras.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="cta-banner reveal">
-          <span style="font-family:var(--font-accent);font-size:1.25rem;font-style:italic;display:block;margin-bottom:var(--space-md);color:var(--color-gold-light);">Ongi etorri</span>
-          <h2>Bienvenidos a esta casa</h2>
-          <p>Un lugar de encuentro donde comer, beber, comprar y celebrar. Como en casa, pero con Solete Repsol.</p>
-          <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;justify-content:center;">
-            <a href="contacto.html#booking" class="btn btn--gold btn--lg">Reservar mesa</a>
-            <a href="https://wa.me/34911527529" class="btn btn--outline-light btn--lg" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer" role="contentinfo">
+    <span class="site-footer__ongi" aria-hidden="true">Ongi etorri</span>
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo"><img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-logo-horizontal-footer.png" alt="Aguirre Pozuelo" style="height:48px;width:auto;filter:brightness(0) invert(1);"></div>
-          <p class="footer-about">Taberna contemporánea y casa de comidas en Pozuelo de Alarcón. Cocina 100% casera con raíces vasco-navarras. Tienda gourmet, eventos y catering para empresas.</p>
-          <div class="footer-social">
-            <a href="https://www.instagram.com/aguirre_pozuelo" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-            <a href="https://www.youtube.com/@aguirreplace" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
-            <a href="https://www.tripadvisor.es/Restaurant_Review-g644357-d23423456-Reviews-Aguirre_Pozuelo-Pozuelo_de_Alarcon.html" target="_blank" rel="noopener" aria-label="TripAdvisor">TA</a>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="https://aguirrepozuelo.com/wp-content/uploads/2022/12/Aguirre-logo-horizontal-footer.png" alt="Aguirre Pozuelo">
+          <p class="site-footer__about">Taberna contemporánea y casa de comidas en Pozuelo de Alarcón. Cocina 100% casera de raíces vasco-navarras. Tienda gourmet, eventos y catering para empresas.</p>
+          <div class="site-footer__social">
+            <a href="https://www.instagram.com/aguirre_pozuelo" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@aguirreplace" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.tripadvisor.es/Restaurant_Review-g644357-d23423456-Reviews-Aguirre_Pozuelo-Pozuelo_de_Alarcon.html" target="_blank" rel="noopener" aria-label="TripAdvisor">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="4"/><circle cx="17" cy="12" r="4"/><circle cx="7" cy="12" r="1.4" fill="currentColor"/><circle cx="17" cy="12" r="1.4" fill="currentColor"/></svg>
+            </a>
           </div>
         </div>
-        <div><div class="footer-title">Secciones</div><ul class="footer-links"><li><a href="nos-inspira.html">Nos inspira</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="productos.html">Productos</a></li><li><a href="blog.html">Más Aguirre</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-        <div><div class="footer-title">Cartas</div><ul class="footer-links"><li><a href="carta-comida.html">Carta de comidas</a></li><li><a href="carta-bebidas.html">Carta de bebidas</a></li><li><a href="carta-desayunos.html">Carta de desayunos</a></li></ul></div>
-        <div><div class="footer-title">Contacto</div><ul class="footer-links"><li>C/ Segundo Mata, 1</li><li>28224 Pozuelo de Alarcón</li><li><a href="tel:+34911527529">911 527 529</a></li><li><a href="mailto:contacto@aguirreplace.es">contacto@aguirreplace.es</a></li><li><a href="mailto:teresa@aguirreplace.es">teresa@aguirreplace.es</a></li></ul></div>
+
+        <div>
+          <div class="site-footer__col-title">La casa</div>
+          <ul class="site-footer__links">
+            <li><a href="nos-inspira.html">Nos inspira</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="blog.html">Más Aguirre</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+          <div class="site-footer__col-title" style="margin-top: var(--s-6);">Cartas</div>
+          <ul class="site-footer__links">
+            <li><a href="carta-comida.html">Carta de comidas</a></li>
+            <li><a href="carta-bebidas.html">Carta de bebidas</a></li>
+            <li><a href="carta-desayunos.html">Carta de desayunos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="site-footer__col-title">Visítanos</div>
+          <p class="site-footer__contact">
+            <strong>Aguirre Pozuelo</strong>
+            C/ Segundo Mata, 1<br>
+            28224 Pozuelo de Alarcón<br>
+            Madrid<br>
+            <br>
+            <a href="tel:+34911527529">+34 911 527 529</a><br>
+            <a href="mailto:contacto@aguirreplace.es">contacto@aguirreplace.es</a>
+          </p>
+          <div class="site-footer__col-title" style="margin-top: var(--s-6);">Horarios</div>
+          <p class="site-footer__contact" style="font-size: var(--fs-meta); letter-spacing: 0.04em;">
+            Lun–Mié · 08:15 – 17:00<br>
+            Jue–Vie · 08:15 – 00:00<br>
+            Sáb · 12:00 – 00:00<br>
+            Dom · Cerrado
+          </p>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2025</span> Aguirre Place SLU — Todos los derechos reservados</span>
-        <div class="footer-bottom-links"><a href="aviso-legal.html">Aviso Legal</a><a href="politica-privacidad.html">Privacidad</a><a href="politica-cookies.html">Cookies</a></div>
-        <div style="text-align:center;color:rgba(255,255,255,0.22);font-size:0.65rem;margin-top:var(--space-sm);">
-          Interiorismo: Alex D'Alessio
+
+      <div class="site-footer__bottom">
+        <span>© <span data-year>2026</span> Aguirre Place SLU — Todos los derechos reservados · Interiorismo: Alex D'Alessio</span>
+        <div class="site-footer__bottom-links">
+          <a href="aviso-legal.html">Aviso legal</a>
+          <a href="politica-privacidad.html">Privacidad</a>
+          <a href="politica-cookies.html">Cookies</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING -->
-  <a href="#" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">↑</a>
-  <div class="whatsapp-tooltip">¿Hablamos?</div>
-  <a href="https://wa.me/34911527529" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Galería ampliada" aria-modal="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar galería">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M6 18 18 6"/></svg>
+    </button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Imagen anterior">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Siguiente imagen">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <img src="" alt="" class="lightbox__img" id="lightboxImg">
+    <div class="lightbox__counter" id="lightboxCounter">01 / 08</div>
+  </div>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/34911527529" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+  <span class="whatsapp-tooltip" id="whatsappTooltip">¿Hablamos?</span>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <!-- COOKIES -->
-  <div class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies">
-    <div class="cookie-banner-inner">
-      <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptar todas, rechazarlas o configurarlas en nuestra <a href="politica-cookies.html">política de cookies</a>.</p>
-      <div class="cookie-banner-actions">
-        <button class="btn btn--outline cookie-reject" style="font-size:0.75rem;padding:0.6rem 1.2rem;">Rechazar</button>
-        <button class="btn btn--primary cookie-accept" style="font-size:0.75rem;padding:0.6rem 1.2rem;">Aceptar</button>
-      </div>
+  <div class="cookies" id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptarlas, rechazarlas o configurarlas en nuestra <a href="politica-cookies.html">política de cookies</a>.</p>
+    <div class="cookies__actions">
+      <button class="btn btn--outline btn--sm" id="cookieReject">Rechazar</button>
+      <button class="btn btn--primary btn--sm" id="cookieAccept">Aceptar</button>
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <!-- CDN deps -->
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
