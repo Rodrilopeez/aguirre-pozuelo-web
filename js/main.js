@@ -442,26 +442,22 @@
   function initCursor() {
     if (!finePointer.matches || isReduced()) return;
     const cursor = document.getElementById('cursor');
-    const dot = document.getElementById('cursorDot');
-    if (!cursor || !dot) return;
+    if (!cursor) return;
 
     let mx = window.innerWidth / 2;
     let my = window.innerHeight / 2;
     let cx = mx, cy = my;
-    let dx = mx, dy = my;
     let visible = false;
 
     window.addEventListener('mousemove', (e) => {
       mx = e.clientX; my = e.clientY;
       if (!visible) {
         cursor.classList.add('is-active');
-        dot.classList.add('is-active');
         visible = true;
       }
     });
     window.addEventListener('mouseleave', () => {
       cursor.classList.remove('is-active');
-      dot.classList.remove('is-active');
       visible = false;
     });
 
@@ -476,10 +472,7 @@
     function loop() {
       cx += (mx - cx) * 0.18;
       cy += (my - cy) * 0.18;
-      dx += (mx - dx) * 0.6;
-      dy += (my - dy) * 0.6;
       cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%)`;
       requestAnimationFrame(loop);
     }
     requestAnimationFrame(loop);

@@ -1774,28 +1774,18 @@ em, i { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
 }
 
 /* === 20. CURSOR ================================================= */
-.cursor,
-.cursor-dot {
+.cursor {
   position: fixed;
   top: 0; left: 0;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
   opacity: 0;
-}
-.cursor {
   width: 36px;
   height: 36px;
   border: 1px solid var(--cream-soft);
   border-radius: 50%;
   transition: width 0.3s var(--ease-out-soft), height 0.3s var(--ease-out-soft), background 0.3s var(--ease-out-soft);
-  transform: translate(-50%, -50%);
-}
-.cursor-dot {
-  width: 5px;
-  height: 5px;
-  background: var(--cream-soft);
-  border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 .cursor.is-hovering {
@@ -1805,9 +1795,6 @@ em, i { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
   mix-blend-mode: difference;
 }
 .cursor.is-active {
-  opacity: 1;
-}
-.cursor-dot.is-active {
   opacity: 1;
 }
 
@@ -2207,12 +2194,12 @@ em, i { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
   .hero__title .word { opacity: 1; transform: none; filter: none; }
   [data-reveal] { opacity: 1; transform: none; }
   [data-reveal="image"] { clip-path: inset(0); transform: none; }
-  .cursor, .cursor-dot { display: none !important; }
+  .cursor { display: none !important; }
 }
 
 /* hide cursor only on fine pointer */
 @media (pointer: coarse), (hover: none) {
-  .cursor, .cursor-dot { display: none !important; }
+  .cursor { display: none !important; }
 }
 
 /* =================================================================
