@@ -487,17 +487,6 @@
   }
 
   /* ============================================================
-     WHATSAPP tooltip
-     ============================================================ */
-  function initWhatsApp() {
-    const tip = document.getElementById('whatsappTooltip');
-    if (!tip) return;
-    setTimeout(() => tip.classList.add('is-visible'), 3500);
-    window.addEventListener('scroll', () => tip.classList.remove('is-visible'), { once: true, passive: true });
-    document.querySelector('.whatsapp-float')?.addEventListener('click', () => tip.classList.remove('is-visible'));
-  }
-
-  /* ============================================================
      COOKIES banner
      ============================================================ */
   function initCookies() {
@@ -607,7 +596,6 @@
     initTestimonials();
     initPageTransitions();
     initBackToTop();
-    initWhatsApp();
     initCookies();
     initForms();
     initStaticBits();
